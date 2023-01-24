@@ -86,3 +86,7 @@ li button {
   padding: 20px;
   width: 80vw;
 }
+
+.hide-element {
+  display: none
+}
