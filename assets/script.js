@@ -7,8 +7,8 @@ let cards = document.querySelector(".card")
 let input = document.querySelector("#input")
 // Global variables
 let secondsLeft = 15;
-let correctAnswers = "";
-let wrongAnswers = "";
+let correctAnswers = 0;
+let wrongAnswers = 0;
 let counter = 0;
 let theQuestions = [
     {
@@ -74,13 +74,13 @@ function showAnswers() {
 function checkAnswer(event) {
     let activeAnswer = theQuestions[counter];
     if (event.target.textContent != activeAnswer.correctAnswer) {
-        alert("incorrect answer")
+        
         secondsLeft = secondsLeft - 5
-        wrongAnswers = wrongAnswers + 1
+        console.log(wrongAnswers++)
     }
     else {
-        alert("correct answer")
-        correctAnswers = correctAnswers +1
+        
+        console.log(correctAnswers++)
     }
     counter++
     showQuestions();
@@ -105,6 +105,12 @@ function checkAnswer(event) {
 function gameOver() {
     cards.setAttribute("class", "hide-element");
     input.removeAttribute("class");
+}
+
+function endQuestions() {
+    if(correctAnswers + wrongAnswers >= 3) {
+    gameOver()
+}
 }
 
 function gameStart() {

@@ -6,7 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #eff5f8;
+  background-color: #000000;
   color: #001b44;
 }
 
@@ -24,7 +24,7 @@ input {
 }
 
 header {
-  background-color: #001b44;
+  background-color: #000000;
   padding: 3em;
 }
 h1 {
@@ -89,4 +89,22 @@ li button {
 
 .hide-element {
   display: none
+}
+
+header button {
+  position: relative;
+  left: 40%;
+  border-radius: 8px;
+  background-color: #0a86ac;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+header button:hover {
+  background-color: #034357;
 }
